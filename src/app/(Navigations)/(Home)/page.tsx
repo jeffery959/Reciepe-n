@@ -210,7 +210,7 @@ export default function Home() {
 const SingleIcon=({imgSrc,title}:{imgSrc:string,title:string})=>{
   const router = useRouter()
  const Redirect=()=>{
-  router.push(`http://localhost:3000/Recipe?category=${title}&search=`)
+  router.push(`https://reciepe-ma1u530fz-jeffery959s-projects.vercel.app?category=${title}&search=`)
  }
   return(
     <div onClick={()=>Redirect()} className="cursor-pointer hover:shadow-lg hover:bg-slate-100 duration-150 w-full bg-white  border flex-col py-4  flex justify-center items-center rounded-2xl">

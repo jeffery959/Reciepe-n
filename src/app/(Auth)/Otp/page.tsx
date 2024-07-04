@@ -20,7 +20,7 @@ const Login = () => {
     }
     const Email= localStorage.getItem("Email")
 
-    axios.post('http://localhost:3000/api/Register',{Email,otp:Otp})
+    axios.post('https://reciepe-ma1u530fz-jeffery959s-projects.vercel.app/api/Register',{Email,otp:Otp})
    .then((response)=>{toast.success(response.data.msg);setTimeout(()=>{
     router.push('/Login')
     },4000)})

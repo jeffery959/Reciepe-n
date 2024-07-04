@@ -27,7 +27,7 @@ if(repeatPass!==user.Password){
   return
 }
 
-await axios.post('http://localhost:3000/api/Otp',user)
+await axios.post('https://reciepe-ma1u530fz-jeffery959s-projects.vercel.app/api/Otp',user)
 .then((response)=>{router.push('/Otp'); localStorage.setItem("Email",user.Email)})
 .catch((err)=>toast.error(err.response.data.msg))
   }
