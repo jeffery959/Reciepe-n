@@ -7,6 +7,7 @@ import {useState} from "react"
 import toast,{Toaster} from 'react-hot-toast'
 import axios from 'axios'
 import { handleUserValue } from '../../../Jeffery-Library/react'
+import { UrlLink } from '@/app/Db/Utils'
 const SignUp = () => {
   const router = useRouter()
   const [user,setUser]=useState({FirstName:'',LastName:'',Email:"",Password:""})
@@ -27,7 +28,7 @@ if(repeatPass!==user.Password){
   return
 }
 
-await axios.post('https://reciepe-ma1u530fz-jeffery959s-projects.vercel.app/api/Otp',user)
+await axios.post(`${UrlLink}/api/Otp`,user)
 .then((response)=>{router.push('/Otp'); localStorage.setItem("Email",user.Email)})
 .catch((err)=>toast.error(err.response.data.msg))
   }

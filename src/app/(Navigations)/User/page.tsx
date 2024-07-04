@@ -12,6 +12,7 @@ import { setCookie,getCookie } from 'cookies-next';
 import axios from 'axios';
 import { Tooltip } from '@nextui-org/tooltip';
 import { DeleteModal } from './DeleteModal';
+import { UrlLink } from '@/app/Db/Utils';
 const  signOut=(setLogIn:any)=>{
   setCookie('token',"")
   
@@ -49,7 +50,7 @@ setToggleModal(false)
 const ShrtName=logedUser.FirstName?.split('')[0]+logedUser.LastName?.split('')[0]
 const getUserPost=()=>{
   const token=getCookie('token')
-  axios.get('http://localhost:3000/api/SecuredRoute/GetPost',{headers:{
+  axios.get(`${UrlLink}/api/SecuredRoute/GetPost`,{headers:{
     'Authorization': `Bearer ${token}`,
     'Content-Type': 'application/json'
   }})

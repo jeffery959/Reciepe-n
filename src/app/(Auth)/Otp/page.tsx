@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import {useState} from "react"
 import toast,{Toaster} from 'react-hot-toast'
 import axios from 'axios'
+import { UrlLink } from '@/app/Db/Utils'
 const Login = () => {
   const router =useRouter()
   const [Otp,setOtp]=useState("")
@@ -20,7 +21,7 @@ const Login = () => {
     }
     const Email= localStorage.getItem("Email")
 
-    axios.post('https://reciepe-ma1u530fz-jeffery959s-projects.vercel.app/api/Register',{Email,otp:Otp})
+    axios.post(`${UrlLink}/api/Register`,{Email,otp:Otp})
    .then((response)=>{toast.success(response.data.msg);setTimeout(()=>{
     router.push('/Login')
     },4000)})

@@ -14,6 +14,7 @@ import { useGlobalContext } from '@/app/Context/store';
 import { handleUserValue } from '../../../Jeffery-Library/react';
 import { Toaster,toast } from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
+import { UrlLink } from '@/app/Db/Utils';
 
 
 // Install Swiper modules
@@ -210,7 +211,7 @@ export default function Home() {
 const SingleIcon=({imgSrc,title}:{imgSrc:string,title:string})=>{
   const router = useRouter()
  const Redirect=()=>{
-  router.push(`https://reciepe-ma1u530fz-jeffery959s-projects.vercel.app?category=${title}&search=`)
+  router.push(`${UrlLink}?category=${title}&search=`)
  }
   return(
     <div onClick={()=>Redirect()} className="cursor-pointer hover:shadow-lg hover:bg-slate-100 duration-150 w-full bg-white  border flex-col py-4  flex justify-center items-center rounded-2xl">

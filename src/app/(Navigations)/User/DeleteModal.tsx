@@ -8,12 +8,13 @@ import toast, { Toaster } from 'react-hot-toast';
 import axios from 'axios';
 import { getCookie } from 'cookies-next';
 import Loading from '@/app/Components/Loading';
+import { UrlLink } from '@/app/Db/Utils';
 
 export const DeleteModal = ({toggleModal,Id,Name,setRecipes}:{toggleModal:()=>void,Id:string,Name:string,setRecipes:any}) => {
  
   const getUserPost=async()=>{
     const token=getCookie('token')
-    await axios.get('http://localhost:3000/api/SecuredRoute/GetPost',{headers:{
+    await axios.get(`${UrlLink}/api/SecuredRoute/GetPost`,{headers:{
       'Authorization': `Bearer ${token}`,
       'Content-Type': 'application/json'
     }})
@@ -23,7 +24,7 @@ export const DeleteModal = ({toggleModal,Id,Name,setRecipes}:{toggleModal:()=>vo
     .catch((err)=>{console.log(err)})
   }
 const DeleteItem=async(Id:string)=>{
-  await axios.delete(`http://localhost:3000/api/Delete/${Id}`)
+  await axios.delete(`${UrlLink}/api/Delete/${Id}`)
   .then(async (resp)=>{
     
    await getUserPost()

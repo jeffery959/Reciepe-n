@@ -7,7 +7,7 @@ import axios from 'axios'
 import { useSearchParams } from 'next/navigation'
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/navigation';
-import { getRecipe } from "../../Db/Utils"
+import { UrlLink, getRecipe } from "../../Db/Utils"
 
 const Recipe = () => {
  
@@ -62,12 +62,12 @@ const NewSearch = ({recipeList,setRecipes,setRecipeTitle}:{recipeList:any,setRec
  
     
     if(name==='All'||name===''||name==null){
-      router.push(`https://reciepe-ma1u530fz-jeffery959s-projects.vercel.app?category=All&search=${Search=='null'?Search:''}`)
+      router.push(`${UrlLink}?category=All&search=${Search=='null'?Search:''}`)
       setRecipes(recipeList)
       setRecipeTitle("Recipe")
       return recipeList
     }
-    router.push(`https://reciepe-ma1u530fz-jeffery959s-projects.vercel.app?category=${name}&search=${Search}`)
+    router.push(`${UrlLink}?category=${name}&search=${Search}`)
     const newRecipe=recipeList.filter((itm:any)=>itm.UserInfo.Category===name)
     setRecipeTitle(name)
     setRecipes(newRecipe)
@@ -76,7 +76,7 @@ const NewSearch = ({recipeList,setRecipes,setRecipeTitle}:{recipeList:any,setRec
   }
   const FilterSearch=(e:any)=>{
     
-    router.push(`https://reciepe-ma1u530fz-jeffery959s-projects.vercel.app?category=${category}&search=${e}`)
+    router.push(`${UrlLink}?category=${category}&search=${e}`)
     
     let CategoryRecipe=recipeList.filter((itm:any)=>itm.UserInfo.Category===category)
     if(category==='All'){
