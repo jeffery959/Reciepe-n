@@ -62,12 +62,12 @@ const NewSearch = ({recipeList,setRecipes,setRecipeTitle}:{recipeList:any,setRec
  
     
     if(name==='All'||name===''||name==null){
-      router.push(`${UrlLink}?category=All&search=${Search=='null'?Search:''}`)
+      router.push(`${UrlLink}/Recipe?category=All&search=${Search=='null'?Search:''}`)
       setRecipes(recipeList)
       setRecipeTitle("Recipe")
       return recipeList
     }
-    router.push(`${UrlLink}?category=${name}&search=${Search}`)
+    router.push(`${UrlLink}/Recipe?category=${name}&search=${Search}`)
     const newRecipe=recipeList.filter((itm:any)=>itm.UserInfo.Category===name)
     setRecipeTitle(name)
     setRecipes(newRecipe)
@@ -76,7 +76,7 @@ const NewSearch = ({recipeList,setRecipes,setRecipeTitle}:{recipeList:any,setRec
   }
   const FilterSearch=(e:any)=>{
     
-    router.push(`${UrlLink}?category=${category}&search=${e}`)
+    router.push(`${UrlLink}/Recipe?category=${category}&search=${e}`)
     
     let CategoryRecipe=recipeList.filter((itm:any)=>itm.UserInfo.Category===category)
     if(category==='All'){
