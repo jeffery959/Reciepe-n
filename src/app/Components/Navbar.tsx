@@ -75,7 +75,7 @@ const token = getCookie("token")
             <div className={`bg-white sm:bg-transparent border flex sm:flex-row flex-col w-44 sm:w-4/5 xs:mt-44 ${login?"mt-44 left-5 ":"mt-56 xs:left-5 "} rounded-lg sm:mt-0 absolute px-5  sm:relative sm:justify-between sm:shadow-none sm:border-0 shadow-md py-2 ${mobileToggle?'':'hidden sm:flex'}`}>
             
               {
-                navigation.map((itm:{route:string,name:string},key)=><Link key={key} href={base_route+itm.route} className={`${RouteActive('/'+itm.route)?'text-primary':RouteActive('/Contact')&&isScroll?"sm:text-white  text-gray-600":'text-gray-600'} `}>{itm.name}</Link>)
+                navigation.map((itm:{route:string,name:string},key)=><Link key={key} href={base_route+'/'+itm.route} className={`${RouteActive('/'+itm.route)?'text-primary':RouteActive('/Contact')&&isScroll?"sm:text-white  text-gray-600":'text-gray-600'} `}>{itm.name}</Link>)
               }
               {!login&&<div className='xs:hidden text-gray-600'>
                 <p>SingUp</p>
