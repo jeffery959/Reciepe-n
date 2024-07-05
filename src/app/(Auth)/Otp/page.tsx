@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import {useState} from "react"
 import toast,{Toaster} from 'react-hot-toast'
 import axios from 'axios'
-import { UrlLink } from '@/app/Db/Utils'
+import { UrlLink } from '../../Db/Utils'
 const Login = () => {
   const router =useRouter()
   const [Otp,setOtp]=useState("")
