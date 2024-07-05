@@ -9,6 +9,6 @@ export const getRecipe = async(setRecipeList:any)=>{
     .catch((err)=>{
       console.log(err)
     })
-
+return
   }
 
