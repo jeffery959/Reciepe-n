@@ -90,11 +90,5 @@ const Page = () => {
   )
 }
 
-/*  <div className='flex mt-2 justify-between items-center '>
-        <button className='bg-primary hover:shadow-lg shadow-md px-5 py-2 text-white rounded-3xl flex items-center justify-center ' onClick={()=>console.log(SingleItem)}>Notify
-        <Image src={'/Icons/Notify.svg'} width={20} height={20} alt='' className='ml-2'/>
-        </button>  
-        <Image src={'/Icons/Saved.svg'} width={16} height={16} alt='' className='ml-2 cursor-pointer'/>
 
-        </div> */
 export default Page
