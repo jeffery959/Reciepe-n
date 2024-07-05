@@ -99,7 +99,7 @@ CategoryRecipe = recipeList
 
     }
    
-  },[recipeList])
+  },[])
   return (
     <div className='Recipe_Grid_1_Category w-full'>
           <p className='hidden md:block text-Gray-Bold w-full font-bold '>Category</p>
