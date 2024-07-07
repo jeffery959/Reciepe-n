@@ -68,6 +68,7 @@ export default function Home() {
       swiperRef.current.swiper.slidePrev();
     }
   };
+  
   return (
     <main className="w-full  flex justify-center flex-col sm:pt-20">
       <Toaster/>

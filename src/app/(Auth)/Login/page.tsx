@@ -32,7 +32,7 @@ const Login = () => {
     }
     
     
-    await axios.post(`${base_route}api/Login`,user)
+    await axios.post(`${base_route}/api/Login`,user)
     .then((response)=>{toast.success(response.data.msg); 
     
       setLogIn(true) 
