@@ -55,3 +55,7 @@ Phone:
 	└── ./      # Global CSS and Tailwind config
 	└── 
 
+
+Distributed under the MIT License. See LICENSE for more information. 
+
+Created by Jeffrey Kwaku Konadu Aaron   Portfolio: https://porfolio-wine-three.vercel.app   LinkedIn: https://www.linkedin.com/in/jeffery-aaron-a0b077244 
