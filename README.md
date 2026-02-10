@@ -43,10 +43,10 @@ Phone:
 	     ├── Jeffery-Library 
 	     ├── app/
 		       ├── (Auth) /
-			├── Login
-			├── Otp
-			├── Signup
-         	       ├── (Navigations) / # Pages (Home, AboutUs, Contact, Recipe, User)
+					├── Login
+					├── Otp
+					├── Signup
+         	   ├── (Navigations) / # Pages (Home, AboutUs, Contact, Recipe, User)
 		       
 		 ├── Components/  # Reusable UI (Footer, Modal, SingleRecipe)
 		 ├── Context
