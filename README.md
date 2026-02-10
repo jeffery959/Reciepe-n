@@ -40,20 +40,20 @@ Phone:
 
 	├── public/          # Static assets (icons, Images)
 	├── src/
-	          ├── Jeffery-Library /
-	          ├── app/
+	     ├── Jeffery-Library 
+	     ├── app/
 		       ├── (Auth) /
 			├── Login
 			├── Otp
 			├── Signup
          	       ├── (Navigations) / # Pages (Home, AboutUs, Contact, Recipe, User)
 		       
-		├── Components/  # Reusable UI (Footer, Modal, SingleRecipe)
-		├── Context
-		├── Db
-		├── api
-	└── ./      # Global CSS and Tailwind config
-	└── 
+		 ├── Components/  # Reusable UI (Footer, Modal, SingleRecipe)
+		 ├── Context
+		 ├── Db
+		 ├── api
+ 	 └── ./      # Global CSS and Tailwind config
+	 └── 
 
 
 Distributed under the MIT License. See LICENSE for more information. 
