@@ -30,9 +30,11 @@ Desktop View:
 
 
 
+<img width="1278" height="827" alt="Recipe_Desktop" src="https://github.com/user-attachments/assets/0553c94f-63dc-4d0b-b31f-e11c66ae016a" />
 
 Phone:
 
+<img width="183" height="347" alt="Recipe_Mobile" src="https://github.com/user-attachments/assets/fe6a530b-7f13-4dc2-b00d-53c389b235f8" />
 
 📂 Project Structure
 
